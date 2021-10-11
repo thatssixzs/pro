@@ -115,57 +115,6 @@
             </div>
         </div>
 
-<!-- Navigation Section -->        
-        <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <span class="navigation__span">Hosting</span>
-            <ul class="navigation__sublist">
-              <li class="navigation__item">
-                <a class="navigation__link" href="shared.php">Shared Hosting</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="shared.php?#reseller-monthly">Reseller Hosting</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="servers.php">Dedicated Servers</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="domains.php">Domains</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="coin-accept.php">Payment Methods</a>
-          </li>
-          <li class="navigation__item">
-            <span class="navigation__span">About</span>
-            <ul class="navigation__sublist">
-              <li class="navigation__item">
-                <a class="navigation__link" href="about.php">Mission</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="https://coinhost.zendesk.com/hc/" target="_blank">FAQ</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="data-center.php">Data Center</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="https://coinhost.zendesk.com/hc/" target="_blank">Learning Center</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="https://coinhost.zendesk.com/hc/en-us/requests/new" target="_blank">Contact us</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        </nav>
-        <div class="hamburger">
-        <div class="hamburger-one"></div>
-        <div class="hamburger-two"></div>
-        <div class="hamburger-three"></div>
-        </div>
-
     </header>
 
     {include file="$template/includes/network-issues-notifications.tpl"}
