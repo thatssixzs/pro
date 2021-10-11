@@ -1,8 +1,8 @@
 # WHMCS Twenty-One Theme Configuration File
 
-name: "pro"
-description: "The Updated Theme for 2022"
-author: "Coinhost.io Web Services"
+name: "Twenty-One"
+description: "The Default Theme for WHMCS 2021"
+author: "WHMCS Limited"
 properties:
   serverSidePagination: false # Defines client side will handle pagination
 provides:
