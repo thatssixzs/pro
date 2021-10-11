@@ -12,87 +12,82 @@
     </section>
 
     <footer id="footer" class="footer">
-  <div class="footer__top">
-    <div class="footer__one fade-in">
-      <img class="footer__logo" src="public/images/logo.png" alt="Coinhost logo" />
-      <p class="footer__text">
-        Simple Transparent Hosting and Affiliate Program
-      </p>
-      <p class="footer__title">Follow Us:</p>
-      <ul class="share__list">
-        <li class="share__list-item">
-          <a class="share__list-link" href="https://www.facebook.com/coinhost">
-            <img class="share__list-icon" src="public/images/fb-icon.svg" alt="" />
-          </a>
-        </li>
-        <li class="share__list-item">
-          <a class="share__list-link" href="https://twitter.com/hostcoin">
-            <img class="share__list-icon" src="public/images/twitter-icon.svg" alt="" />
-          </a>
-        </li>
-      </ul>
+        <div class="container">
+            <ul class="list-inline mb-7 text-center float-lg-right">
+                {include file="$template/includes/social-accounts.tpl"}
+
+                {if $languagechangeenabled && count($locales) > 1 || $currencies}
+                    <li class="list-inline-item">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modalChooseLanguage">
+                            <div class="d-inline-block align-middle">
+                                <div class="iti-flag {if $activeLocale.countryCode === 'GB'}us{else}{$activeLocale.countryCode|lower}{/if}"></div>
+                            </div>
+                            {$activeLocale.localisedName}
+                            /
+                            {$activeCurrency.prefix}
+                            {$activeCurrency.code}
+                        </button>
+                    </li>
+                {/if}
+            </ul>
+
+            <ul class="nav justify-content-center justify-content-lg-start mb-7">
+                <li class="nav-item">
+                    <a class="nav-link" href="{$WEB_ROOT}/contact.php">
+                        {lang key='contactus'}
+                    </a>
+                </li>
+                {if $acceptTOS}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{$tosURL}" target="_blank">{lang key='ordertos'}</a>
+                    </li>
+                {/if}
+            </ul>
+
+            <p class="copyright mb-0">
+                {lang key="copyrightFooterNotice" year=$date_year company=$companyname}
+            </p>
+        </div>
+    </footer>
+
+    <div id="fullpage-overlay" class="w-hidden">
+        <div class="outer-wrapper">
+            <div class="inner-wrapper">
+                <img src="{$WEB_ROOT}/assets/img/overlay-spinner.svg" alt="">
+                <br>
+                <span class="msg"></span>
+            </div>
+        </div>
     </div>
-    <!-- end of footer__one -->
-    <div class="footer__five fade-in">
-      <p class="footer__title">Ask</p>
-      <a class="footer__list-link" href="tel:720-515-1505">+ 1 (720) 515 - 1505</a>
-      <br />
-      <a class="footer__list-link" href="mailto:support@coinhost.io">support@coinhost.io</a>
+
+    <div class="modal system-modal fade" id="modalAjax" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">{lang key='close'}</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {lang key='loading'}
+                </div>
+                <div class="modal-footer">
+                    <div class="float-left loader">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                        {lang key='loading'}
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        {lang key='close'}
+                    </button>
+                    <button type="button" class="btn btn-primary modal-submit">
+                        {lang key='submit'}
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- end of footer__two -->
-    <div class="footer__two fade-in">
-      <p class="footer__title">Choose</p>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="shared.php">Shared Hosting</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="shared.php?#reseller-monthly">Reseller Hosting</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="earn-bitcoin.html">Bitcoin Affiliate Program</a>
-        </li>
-      </ul>
-    </div>
-    <!-- end of footer__three -->
-    <div class="footer__four fade-in">
-      <p class="footer__title">Start</p>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="shared.php">
-            Wordpress, Joomla, Web Hosting</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="shared.php?s=3#accordion">Softacolous, PHP
-            Selector, Plesk</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="shared.php?s=5#accordion">99.9% Uptime
-            Guarantee</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="https://www.portal.coinhost.io/cart.php?a=add&amp;pid=9">Only $99 Per
-            Year</a>
-        </li>
-      </ul>
-    </div>
-    <!-- end of footer__four -->
-    <div class="footer__three fade-in">
-      <p class="footer__title">Get Support</p>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-link" target="_blank" href="https://coinhost.zendesk.com/hc">Knowledge Center</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" target="_blank" href="https://coinhost.zendesk.com/hc/en-us/requests/new">Submit a Ticket</a>
-        </li>
-      </ul>
-    </div>
-    <!-- end of footer__five -->
-  </div>
-  <div class="footer__bottom">
-    All rights reserved © Coinhost.io Web Services.
-  </div>
 
     <form method="get" action="{$currentpagelinkback}">
         <div class="modal modal-localisation" id="modalChooseLanguage" tabindex="-1" role="dialog">
