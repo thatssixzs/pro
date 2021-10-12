@@ -55,7 +55,7 @@
             <p class="footer__title">Start</p>
             <ul class="footer__list">
                 <li class="footer__list-item">
-                <a class="footer__list-link" target="_blank" href="https://coinhost.in/shared.php">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php">
                     Wordpress, Joomla, Web Hosting</a>
                 </li>
                 <li class="footer__list-item">
