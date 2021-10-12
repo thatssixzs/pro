@@ -11,6 +11,84 @@
         </div>
     </section>
 
+    <footer id="footer" class="footer">
+        <div class="container">
+            <ul class="list-inline mb-7 text-center float-lg-right">
+                {include file="$template/includes/social-accounts.tpl"}
+
+                {if $languagechangeenabled && count($locales) > 1 || $currencies}
+                    <li class="list-inline-item">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modalChooseLanguage">
+                            <div class="d-inline-block align-middle">
+                                <div class="iti-flag {if $activeLocale.countryCode === 'GB'}us{else}{$activeLocale.countryCode|lower}{/if}"></div>
+                            </div>
+                            {$activeLocale.localisedName}
+                            /
+                            {$activeCurrency.prefix}
+                            {$activeCurrency.code}
+                        </button>
+                    </li>
+                {/if}
+            </ul>
+
+            <ul class="nav justify-content-center justify-content-lg-start mb-7">
+                <li class="nav-item">
+                    <a class="nav-link" href="{$WEB_ROOT}/contact.php">
+                        {lang key='contactus'}
+                    </a>
+                </li>
+                {if $acceptTOS}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{$tosURL}" target="_blank">{lang key='ordertos'}</a>
+                    </li>
+                {/if}
+            </ul>
+
+            <p class="copyright mb-0">
+                {lang key="copyrightFooterNotice" year=$date_year company=$companyname}
+            </p>
+        </div>
+    </footer>
+
+    <div id="fullpage-overlay" class="w-hidden">
+        <div class="outer-wrapper">
+            <div class="inner-wrapper">
+                <img src="{$WEB_ROOT}/assets/img/overlay-spinner.svg" alt="">
+                <br>
+                <span class="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal system-modal fade" id="modalAjax" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">{lang key='close'}</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {lang key='loading'}
+                </div>
+                <div class="modal-footer">
+                    <div class="float-left loader">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                        {lang key='loading'}
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        {lang key='close'}
+                    </button>
+                    <button type="button" class="btn btn-primary modal-submit">
+                        {lang key='submit'}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <form method="get" action="{$currentpagelinkback}">
         <div class="modal modal-localisation" id="modalChooseLanguage" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
