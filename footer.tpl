@@ -10,9 +10,9 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer>
         <div class="footer__top">
-            <div class="footer__one fade-in">
+            <div class="footer__one">
             <img class="footer__logo" src="{$assetLogoPath}" alt="{$companyname}" />
             <p class="footer__text">
                 Simple Transparent Hosting and Affiliate Program
@@ -31,13 +31,13 @@
                 </li>
             </ul>
             </div>
-            <div class="footer__five fade-in">
+            <div class="footer__five">
             <p class="footer__title">Ask</p>
             <a class="footer__list-link" href="tel:720-515-1505">+ 1 (720) 515 - 1505</a>
             <br />
             <a class="footer__list-link" href="mailto:support@coinhost.io">support@coinhost.io</a>
             </div>
-            <div class="footer__two fade-in">
+            <div class="footer__two">
             <p class="footer__title">Choose</p>
             <ul class="footer__list">
                 <li class="footer__list-item">
@@ -47,15 +47,15 @@
                 <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?#reseller-monthly">Reseller Hosting</a>
                 </li>
                 <li class="footer__list-item">
-                <a class="footer__list-link" target="_blank href="https://coinhost.io/earn-bitcoin.html">Bitcoin Affiliate Program</a>
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/earn-bitcoin.html">Bitcoin Affiliate Program</a>
                 </li>
             </ul>
             </div>
-            <div class="footer__four fade-in">
+            <div class="footer__four">
             <p class="footer__title">Start</p>
             <ul class="footer__list">
                 <li class="footer__list-item">
-                <a class="footer__list-link" href="shared.php">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.in/shared.php">
                     Wordpress, Joomla, Web Hosting</a>
                 </li>
                 <li class="footer__list-item">
@@ -67,12 +67,12 @@
                     Guarantee</a>
                 </li>
                 <li class="footer__list-item">
-                <a class="footer__list-link" href="https://www.portal.coinhost.io/cart.php?a=add&amp;pid=9">Only $99 Per
+                <a class="footer__list-link" target="_blank" href="https://www.portal.coinhost.io/cart.php?a=add&amp;pid=9">Only $99 Per
                     Year</a>
                 </li>
             </ul>
             </div>
-            <div class="footer__three fade-in">
+            <div class="footer__three">
             <p class="footer__title">Get Support</p>
             <ul class="footer__list">
                 <li class="footer__list-item">
