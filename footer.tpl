@@ -47,7 +47,7 @@
                 <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?#reseller-monthly">Reseller Hosting</a>
                 </li>
                 <li class="footer__list-item">
-                <a class="footer__list-link" target="_blank" href="https://coinhost.io/earn-bitcoin.html">Bitcoin Affiliate Program</a>
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/earn-bitcoin.php">Bitcoin Affiliate Program</a>
                 </li>
             </ul>
             </div>
