@@ -5,7 +5,7 @@ header.header .logo-img{
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
-  font-size: 1.25vw;
+  font-size: clamp(1rem,1.5rem,2rem);
   line-height: 150%;
 }
 @media screen and (max-width: 1440px) {
@@ -22,7 +22,7 @@ header.header .logo-img{
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 0.9375vw;
+  font-size: clamp(0.875rem,5vw,1.08rem);
   line-height: 150%;
 }
 @media screen and (max-width: 1920px) {
@@ -82,7 +82,7 @@ header.header .logo-img{
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9375vw;
+  font-size: clamp(0.875rem,5vw,1.08rem);
   line-height: 150%;
 }
 @media screen and (max-width: 1920px) {
@@ -97,7 +97,7 @@ header.header .logo-img{
 }
 .footer__top {
   background: #313131;
-  padding: 5.36458vw 6.25vw 4.27vw;
+  padding: 7rem 23rem;
   display: flex;
   justify-content: space-between;
 }
@@ -159,7 +159,7 @@ header.header .logo-img{
   }
 }
 .footer__logo {
-  width: 10.5729vw;
+  width:100%;
   margin-bottom: 1vw;
 }
 @media screen and (max-width: 1920px) {

@@ -59,7 +59,7 @@
                     Wordpress, Joomla, Web Hosting</a>
                 </li>
                 <li class="footer__list-item">
-                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?s=3#accordion">Softacolous, PHP
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?s=3#accordion">Softaculous, PHP
                     Selector, Plesk</a>
                 </li>
                 <li class="footer__list-item">
@@ -67,7 +67,7 @@
                     Guarantee</a>
                 </li>
                 <li class="footer__list-item">
-                <a class="footer__list-link" target="_blank" href="https://www.portal.coinhost.io/cart.php?a=add&amp;pid=9">Only $99 Per
+                <a class="footer__list-link" target="_blank" href="https://www.portal.coinhost.io/cart.php?a=add&pid=9&billingcycle=annually">Only $99 Per
                     Year</a>
                 </li>
             </ul>
