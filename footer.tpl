@@ -10,46 +10,84 @@
             </div>
         </div>
     </section>
-
-    <footer id="footer" class="footer">
-        <div class="container">
-            <ul class="list-inline mb-7 text-center float-lg-right">
-                {include file="$template/includes/social-accounts.tpl"}
-
-                {if $languagechangeenabled && count($locales) > 1 || $currencies}
-                    <li class="list-inline-item">
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modalChooseLanguage">
-                            <div class="d-inline-block align-middle">
-                                <div class="iti-flag {if $activeLocale.countryCode === 'GB'}us{else}{$activeLocale.countryCode|lower}{/if}"></div>
-                            </div>
-                            {$activeLocale.localisedName}
-                            /
-                            {$activeCurrency.prefix}
-                            {$activeCurrency.code}
-                        </button>
-                    </li>
-                {/if}
-            </ul>
-
-            <ul class="nav justify-content-center justify-content-lg-start mb-7">
-                <li class="nav-item">
-                    <a class="nav-link" href="{$WEB_ROOT}/contact.php">
-                        {lang key='contactus'}
-                    </a>
-                </li>
-                {if $acceptTOS}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{$tosURL}" target="_blank">{lang key='ordertos'}</a>
-                    </li>
-                {/if}
-            </ul>
-
-            <p class="copyright mb-0">
-                {lang key="copyrightFooterNotice" year=$date_year company=$companyname}
+    <footer>
+        <div class="footer__top">
+            <div class="footer__one">
+            <img class="footer__logo" src="{$assetLogoPath}" alt="{$companyname}" />
+            <p class="footer__text">
+                Simple Transparent Hosting and Affiliate Program
             </p>
+            <p class="footer__title">Follow Us:</p>
+            <ul class="share__list">
+                <li class="share__list-item">
+                <a class="share__list-link" href="https://www.facebook.com/coinhost">
+                    <img class="share__list-icon" src="{$BASE_PATH_IMG}/fb-icon.svg" alt="" />
+                </a>
+                </li>
+                <li class="share__list-item">
+                <a class="share__list-link" href="https://twitter.com/hostcoin">
+                    <img class="share__list-icon" src="{$BASE_PATH_IMG}/twitter-icon.svg" alt="" />
+                </a>
+                </li>
+            </ul>
+            </div>
+            <div class="footer__five">
+            <p class="footer__title">Ask</p>
+            <a class="footer__list-link" href="tel:720-515-1505">+ 1 (720) 515 - 1505</a>
+            <br />
+            <a class="footer__list-link" href="mailto:support@coinhost.io">support@coinhost.io</a>
+            </div>
+            <div class="footer__two">
+            <p class="footer__title">Choose</p>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php">Shared Hosting</a>
+                </li>
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?#reseller-monthly">Reseller Hosting</a>
+                </li>
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/earn-bitcoin.php">Bitcoin Affiliate Program</a>
+                </li>
+            </ul>
+            </div>
+            <div class="footer__four">
+            <p class="footer__title">Start</p>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php">
+                    Wordpress, Joomla, Web Hosting</a>
+                </li>
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?s=3#accordion">Softaculous, PHP
+                    Selector, Plesk</a>
+                </li>
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.io/shared.php?s=5#accordion">99.9% Uptime
+                    Guarantee</a>
+                </li>
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://www.portal.coinhost.io/cart.php?a=add&pid=9&billingcycle=annually">Only $99 Per
+                    Year</a>
+                </li>
+            </ul>
+            </div>
+            <div class="footer__three">
+            <p class="footer__title">Get Support</p>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.zendesk.com/hc">Knowledge Center</a>
+                </li>
+                <li class="footer__list-item">
+                <a class="footer__list-link" target="_blank" href="https://coinhost.zendesk.com/hc/en-us/requests/new">Submit a Ticket</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            All rights reserved © Coinhost.io Web Services.
         </div>
     </footer>
-
     <div id="fullpage-overlay" class="w-hidden">
         <div class="outer-wrapper">
             <div class="inner-wrapper">
